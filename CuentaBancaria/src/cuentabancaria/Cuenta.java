@@ -9,18 +9,27 @@ package cuentabancaria;
  *
  * @author alumno
  */
-public class Cuenta {
+public class Cuenta implements Imprimible{
     private Persona titular;
     private float saldo;
-    private int Ncuenta;
+    private String Ncuenta;
 
     public Cuenta() {
     }
 
-    public Cuenta(Persona titular, float saldo, int Ncuenta) {
+    public Cuenta(Persona titular, float saldo, String Ncuenta) {
         this.titular = titular;
         this.saldo = saldo;
         this.Ncuenta = Ncuenta;
+    }
+
+    @Override
+    public String imprimir() {
+        return" titula : "+titular.imprimir()+" saldo : "+saldo+" Numero de cuenta : "+Ncuenta;
+    }
+    
+    public String imp(){
+        return" titula : "+titular.imprimir()+" saldo : "+saldo+" Numero de cuenta : "+Ncuenta;
     }
     
     

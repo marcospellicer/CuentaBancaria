@@ -14,9 +14,12 @@ import java.util.HashMap;
 public abstract class Ccorriente  extends Cuenta{
     private HashMap<Integer,String> Lentidades;
 
-    public Ccorriente(HashMap<Integer, String> Lentidades, Persona titular, float saldo, int Ncuenta) {
+    public Ccorriente(Persona titular, float saldo, String Ncuenta) {
         super(titular, saldo, Ncuenta);
-        this.Lentidades = Lentidades;
+        this.Lentidades= new HashMap<>();
+        this.Lentidades.put(0, "Santander");
+        this.Lentidades.put(1, "BBVA");
+        this.Lentidades.put(2, "Ibercaja");
     }
 
     /**

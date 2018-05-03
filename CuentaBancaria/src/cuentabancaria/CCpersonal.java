@@ -14,9 +14,9 @@ import java.util.HashMap;
 public class CCpersonal  extends Ccorriente{
   private double Cmantenimiento;
 
-    public CCpersonal(double Cmantenimiento, HashMap<Integer, String> Lentidades, Persona titular, float saldo, int Ncuenta) {
-        super(Lentidades, titular, saldo, Ncuenta);
-        this.Cmantenimiento = Cmantenimiento;
+    public CCpersonal(Persona titular, float saldo, String Ncuenta) {
+        super(titular, saldo, Ncuenta);
+        this.Cmantenimiento = 5;
     }
 
     /**
@@ -32,6 +32,11 @@ public class CCpersonal  extends Ccorriente{
     public void setCmantenimiento(double Cmantenimiento) {
         this.Cmantenimiento = Cmantenimiento;
     }
-  
+
+    @Override
+    public String imprimir() {
+        return "CUENTA PERSONAL : "+super.imprimir()+" Cuota mantenimiento : "+Cmantenimiento; //To change body of generated methods, choose Tools | Templates.
+    }
+
   
 }

@@ -12,9 +12,9 @@ package cuentabancaria;
 public class Cahorro extends Cuenta{
     private double interes;
 
-    public Cahorro(double interes, Persona titular, float saldo, int Ncuenta) {
+    public Cahorro(Persona titular, float saldo, String Ncuenta) {
         super(titular, saldo, Ncuenta);
-        this.interes = interes;
+        this.interes = 6;
     }
 
     /**
@@ -29,6 +29,11 @@ public class Cahorro extends Cuenta{
      */
     public void setInteres(double interes) {
         this.interes = interes;
+    }
+
+    @Override
+    public String imprimir() {
+        return "CUENTA AHORROS : "+super.imprimir()+" interes : "+interes; //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -9,7 +9,7 @@ package cuentabancaria;
  *
  * @author alumno
  */
-public class Persona {
+public class Persona implements Imprimible{
     private String nombre;
     private String apellido;
     private String fecha;
@@ -28,6 +28,12 @@ public class Persona {
         return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", fecha=" + fecha + '}';
     }
 
+    @Override
+    public String imprimir() {
+        return " nombre : "+nombre+" apellido : "+apellido+" fecha : "+fecha;
+    }
+    
+    
     /**
      * @return the nombre
      */

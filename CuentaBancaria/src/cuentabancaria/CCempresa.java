@@ -15,10 +15,10 @@ public class CCempresa extends Ccorriente{
     private double iDescubierto;
     private float mDescubierto;
 
-    public CCempresa(double iDescubierto, float mDescubierto, HashMap<Integer, String> Lentidades, Persona titular, float saldo, int Ncuenta) {
-        super(Lentidades, titular, saldo, Ncuenta);
-        this.iDescubierto = iDescubierto;
-        this.mDescubierto = mDescubierto;
+    public CCempresa(Persona titular, float saldo, String Ncuenta) {
+        super(titular, saldo, Ncuenta);
+        this.iDescubierto = 5;
+        this.mDescubierto = 0;
     }
 
     /**
@@ -47,6 +47,11 @@ public class CCempresa extends Ccorriente{
      */
     public void setmDescubierto(float mDescubierto) {
         this.mDescubierto = mDescubierto;
+    }
+
+    @Override
+    public String imprimir() {
+        return "CUENTA EMPRESA : "+super.imprimir()+" interes descubierto : "+iDescubierto+" maximo descubierto : "+mDescubierto; //To change body of generated methods, choose Tools | Templates.
     }
     
     
